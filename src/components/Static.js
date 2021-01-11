@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-
+import Image from './image/Image'
 import { useInView } from 'react-intersection-observer';
 const Static = () => {
 
@@ -13,6 +13,8 @@ const Static = () => {
     });
 
 
+    const heroImage = "https://images.pexels.com/photos/1798642/pexels-photo-1798642.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+    const fullWidthImage = "https://images.pexels.com/photos/4705205/pexels-photo-4705205.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 
     const text1 = "LOREM IPSUM DUMMY TEXT"
 
@@ -26,13 +28,17 @@ const Static = () => {
     return (<Fragment>
 
         <div className="hero-image">
+
+            <Image src={heroImage} styleClass="image-style" />
             <div className="center-text">
+
                 <span ref={ref2} className={inView2 ? "text animate-main-text" : "text"}>{text1}  </span>
                 <span ref={ref2} className={inView2 ? "text2 animate-sub-text" : "text2"}>{text2}</span>
             </div>
         </div>
 
         <div className='full-width'>
+            <Image src={fullWidthImage} />
             <div className='align-text-right'>
 
                 <span ref={ref} className={inView && 'section2-text1'} >
@@ -41,28 +47,6 @@ const Static = () => {
                 <span ref={ref} className={inView && 'section2-text2'}>{text2}</span>
             </div>
         </div>
-
-        {/* 
-        <div className='table'>
-
-            <div class="row">
-                <div class="column">
-                    <img src="https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2018/08/kitten-440379.jpg?h=c8d00152&itok=1fdekAh2" alt="Snow" />
-                </div>
-                <div class="column">
-                    <img src="https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2018/08/kitten-440379.jpg?h=c8d00152&itok=1fdekAh2" alt="Forest" />
-                </div>
-                <div class="column">
-                    <img src="https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2018/08/kitten-440379.jpg?h=c8d00152&itok=1fdekAh2" alt="Mountains" />
-                </div>
-            </div>
-        </div> */}
-
-
-
-
-
-
     </Fragment>
 
     )

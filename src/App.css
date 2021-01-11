@@ -10,13 +10,17 @@ body,html{
 /* First Section */
 .hero-image {
   
-  background-image:  url("https://images.pexels.com/photos/1798642/pexels-photo-1798642.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   
+}
+.hero-image img{
+  width: 100%;
+  height: 100%;
 }
 
 .center-text {
@@ -96,9 +100,10 @@ body,html{
 /* Second Section */
 
 .full-width{
-  background-image:  url("https://images.pexels.com/photos/4705205/pexels-photo-4705205.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  
+  
+  margin-bottom: 50px;
   margin-top: 50px;
-  margin-bottom: 20px;
   height: 100%;
   width: 100%;
   background-position: center;
@@ -106,36 +111,47 @@ body,html{
   background-size: cover;
   position: relative;
   
+  
+}
+.full-width img{
+  width: 100%;
+  height: 100%;
+  
+  
 }
 
 .align-text-right{
   text-align: right;
+  left: 0;
+ display: inline;
   position: absolute;
-  margin-top: 20%;
+  top:30%;
+  
+
+ 
   width: 100%;
+ 
 }
 
 .section2-text1{ 
-  color: white;
+  color: red;
   font-size: 40px;
   font-weight: 700;
   letter-spacing: 8px;
   padding-right: 20px;
   margin-bottom: 20px;
-  width: 100%;
-  position: relative;
   animation: section2text1 3s 1;
   
 }
 
 .section2-text2{
+  color: yellow;
   padding-left: 40%;
   padding-right: 20px;
   letter-spacing: 5px;
   display: block;
   text-align: right;
-  color: white;
-  position: relative;
+  
   animation: section2text2 3s 1;
 }
 @keyframes section2text1 {
@@ -214,7 +230,9 @@ body,html{
   display: table;
 }
 
-
+.column h1 {
+  color: red;
+}
 
 .table{
   box-sizing: border-box;
@@ -237,8 +255,12 @@ body,html{
 }
 
 @keyframes fadeText{
-  0%{opacity: 0;}
-  100%{opacity: 1;}
+  0%{opacity: 0;
+    color: yellow;
+  }
+  100%{opacity: 1;
+  color: yellowgreen;
+  }
 } 
 
 @keyframes slideup {
